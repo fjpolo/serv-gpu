@@ -1,0 +1,4 @@
+[submodule "rtl/serv"]
+	path = rtl/serv
+	url = https://github.com/olofk/serv
+	branch = main
