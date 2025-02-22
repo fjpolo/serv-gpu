@@ -1,0 +1,6 @@
+shared_memory/
+shared_memory_bound/
+shared_memory_prf/
+shared_memory_cvr/
+
+status.sqlite

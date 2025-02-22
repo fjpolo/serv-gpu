@@ -1,0 +1,120 @@
+Sourcing OSS CAD Suite environment...
+Checking if required files exist...
+Verifying original ../../../rtl/round_robin_arbiter.sv with formal properties...
+SBY 19:07:51 [round_robin_arbiter_bound] Removing directory '/mnt/c/Workspace/FPGA/serv-gpu/test/formal/round_robin_arbiter/round_robin_arbiter_bound'.
+SBY 19:07:51 [round_robin_arbiter_bound] Copy '/mnt/c/Workspace/FPGA/serv-gpu/test/formal/round_robin_arbiter/round_robin_arbiter_formal.sv' to '/mnt/c/Workspace/FPGA/serv-gpu/test/formal/round_robin_arbiter/round_robin_arbiter_bound/src/round_robin_arbiter_formal.sv'.
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: smtbmc
+SBY 19:07:51 [round_robin_arbiter_prf] Removing directory '/mnt/c/Workspace/FPGA/serv-gpu/test/formal/round_robin_arbiter/round_robin_arbiter_prf'.
+SBY 19:07:51 [round_robin_arbiter_prf] Copy '/mnt/c/Workspace/FPGA/serv-gpu/test/formal/round_robin_arbiter/round_robin_arbiter_formal.sv' to '/mnt/c/Workspace/FPGA/serv-gpu/test/formal/round_robin_arbiter/round_robin_arbiter_prf/src/round_robin_arbiter_formal.sv'.
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0: smtbmc yices
+SBY 19:07:51 [round_robin_arbiter_cvr] Removing directory '/mnt/c/Workspace/FPGA/serv-gpu/test/formal/round_robin_arbiter/round_robin_arbiter_cvr'.
+SBY 19:07:51 [round_robin_arbiter_cvr] Copy '/mnt/c/Workspace/FPGA/serv-gpu/test/formal/round_robin_arbiter/round_robin_arbiter_formal.sv' to '/mnt/c/Workspace/FPGA/serv-gpu/test/formal/round_robin_arbiter/round_robin_arbiter_cvr/src/round_robin_arbiter_formal.sv'.
+SBY 19:07:51 [round_robin_arbiter_cvr] engine_0: smtbmc
+SBY 19:07:51 [round_robin_arbiter_bound] base: starting process "cd round_robin_arbiter_bound/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 19:07:51 [round_robin_arbiter_prf] base: starting process "cd round_robin_arbiter_prf/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 19:07:51 [round_robin_arbiter_bound] base: round_robin_arbiter_formal.sv:52: Warning: Identifier `\i_clk' is implicitly declared.
+SBY 19:07:51 [round_robin_arbiter_prf] base: round_robin_arbiter_formal.sv:52: Warning: Identifier `\i_clk' is implicitly declared.
+SBY 19:07:51 [round_robin_arbiter_bound] base: finished (returncode=0)
+SBY 19:07:51 [round_robin_arbiter_cvr] base: starting process "cd round_robin_arbiter_cvr/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 19:07:51 [round_robin_arbiter_prf] base: finished (returncode=0)
+SBY 19:07:51 [round_robin_arbiter_bound] prep: starting process "cd round_robin_arbiter_bound/model; yosys -ql design_prep.log design_prep.ys"
+SBY 19:07:51 [round_robin_arbiter_cvr] base: round_robin_arbiter_formal.sv:52: Warning: Identifier `\i_clk' is implicitly declared.
+SBY 19:07:51 [round_robin_arbiter_cvr] base: finished (returncode=0)
+SBY 19:07:51 [round_robin_arbiter_bound] prep: finished (returncode=0)
+SBY 19:07:51 [round_robin_arbiter_prf] prep: starting process "cd round_robin_arbiter_prf/model; yosys -ql design_prep.log design_prep.ys"
+SBY 19:07:51 [round_robin_arbiter_cvr] prep: starting process "cd round_robin_arbiter_cvr/model; yosys -ql design_prep.log design_prep.ys"
+SBY 19:07:51 [round_robin_arbiter_prf] prep: finished (returncode=0)
+SBY 19:07:51 [round_robin_arbiter_bound] smt2: starting process "cd round_robin_arbiter_bound/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 19:07:51 [round_robin_arbiter_cvr] prep: finished (returncode=0)
+SBY 19:07:51 [round_robin_arbiter_prf] smt2: starting process "cd round_robin_arbiter_prf/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 19:07:51 [round_robin_arbiter_bound] smt2: finished (returncode=0)
+SBY 19:07:51 [round_robin_arbiter_cvr] smt2: starting process "cd round_robin_arbiter_cvr/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 19:07:51 [round_robin_arbiter_prf] smt2: finished (returncode=0)
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: starting process "cd round_robin_arbiter_bound; yosys-smtbmc --presat --unroll --noprogress -t 16  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 19:07:51 [round_robin_arbiter_cvr] smt2: finished (returncode=0)
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: starting process "cd round_robin_arbiter_prf; yosys-smtbmc -s yices --presat --unroll --noprogress -t 8  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Solver: yices
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assumptions in step 10..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assertions in step 10..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assumptions in step 11..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assertions in step 11..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assumptions in step 12..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assertions in step 12..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assumptions in step 13..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assertions in step 13..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assumptions in step 14..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assertions in step 14..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assumptions in step 15..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Checking assertions in step 15..
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: ##   0:00:00  Status: passed
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: finished (returncode=0)
+SBY 19:07:51 [round_robin_arbiter_bound] engine_0: Status returned by engine: pass
+SBY 19:07:51 [round_robin_arbiter_bound] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 19:07:51 [round_robin_arbiter_bound] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 19:07:51 [round_robin_arbiter_bound] summary: engine_0 (smtbmc) returned pass
+SBY 19:07:51 [round_robin_arbiter_bound] summary: engine_0 did not produce any traces
+SBY 19:07:51 [round_robin_arbiter_bound] DONE (PASS, rc=0)
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.induction: starting process "cd round_robin_arbiter_prf; yosys-smtbmc -s yices --presat --unroll -i --noprogress -t 8  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2"
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Solver: yices
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Checking assumptions in step 3..
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Checking assertions in step 3..
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Checking assumptions in step 4..
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Checking assertions in step 4..
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Checking assumptions in step 5..
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Checking assertions in step 5..
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Checking assumptions in step 6..
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Checking assertions in step 6..
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Checking assumptions in step 7..
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Checking assertions in step 7..
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: ##   0:00:00  Status: passed
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: finished (returncode=0)
+SBY 19:07:51 [round_robin_arbiter_prf] engine_0.basecase: Status returned by engine for basecase: pass
+SBY 19:07:51 [round_robin_arbiter_cvr] engine_0: starting process "cd round_robin_arbiter_cvr; yosys-smtbmc --presat --unroll -c --noprogress -t 128  --append 20 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
+SBY 19:07:52 [round_robin_arbiter_prf] engine_0.induction: ##   0:00:00  Solver: yices
+SBY 19:07:52 [round_robin_arbiter_prf] engine_0.induction: ##   0:00:00  Trying induction in step 8..
+SBY 19:07:52 [round_robin_arbiter_prf] engine_0.induction: ##   0:00:00  Temporal induction successful.
+SBY 19:07:52 [round_robin_arbiter_prf] engine_0.induction: ##   0:00:00  Status: passed
+SBY 19:07:52 [round_robin_arbiter_prf] engine_0.induction: finished (returncode=0)
+SBY 19:07:52 [round_robin_arbiter_prf] engine_0.induction: Status returned by engine for induction: pass
+SBY 19:07:52 [round_robin_arbiter_prf] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 19:07:52 [round_robin_arbiter_prf] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 19:07:52 [round_robin_arbiter_prf] summary: engine_0 (smtbmc yices) returned pass for basecase
+SBY 19:07:52 [round_robin_arbiter_prf] summary: engine_0 (smtbmc yices) returned pass for induction
+SBY 19:07:52 [round_robin_arbiter_prf] summary: engine_0 did not produce any traces
+SBY 19:07:52 [round_robin_arbiter_prf] summary: successful proof by k-induction.
+SBY 19:07:52 [round_robin_arbiter_prf] DONE (PASS, rc=0)
+SBY 19:07:52 [round_robin_arbiter_cvr] engine_0: ##   0:00:00  Solver: yices
+SBY 19:07:52 [round_robin_arbiter_cvr] engine_0: ##   0:00:00  Status: passed
+SBY 19:07:52 [round_robin_arbiter_cvr] engine_0: finished (returncode=0)
+SBY 19:07:52 [round_robin_arbiter_cvr] engine_0: Status returned by engine: pass
+SBY 19:07:52 [round_robin_arbiter_cvr] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 19:07:52 [round_robin_arbiter_cvr] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 19:07:52 [round_robin_arbiter_cvr] summary: engine_0 (smtbmc) returned pass
+SBY 19:07:52 [round_robin_arbiter_cvr] summary: engine_0 did not produce any traces
+SBY 19:07:52 [round_robin_arbiter_cvr] DONE (PASS, rc=0)
