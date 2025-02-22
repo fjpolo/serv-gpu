@@ -4,7 +4,7 @@
 RTL_PATH="../../../rtl"
 MODULE_NAME="shared_memory"
 ORIGINAL_FILE="$RTL_PATH/${MODULE_NAME}.sv"
-ICARUS_TB_FILE="${MODULE_NAME}_tb.sv"
+ICARUS_TB_FILE="tb.sv"
 ICARUS_OUTPUT_FILE="${MODULE_NAME}__out"
 SIMULATOR="iverilog"
 

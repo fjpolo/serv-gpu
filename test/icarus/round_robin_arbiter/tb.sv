@@ -1,13 +1,13 @@
 `timescale 1ns/1ps
 
-module barrier_sync_tb;
+module tb;
 
   parameter NUM_CORES = 1; // Test with 4 core
 
   reg clk;
   reg rst;
 
-  barrier_sync #(NUM_CORES) uut ();
+  round_robin_arbiter #(NUM_CORES) uut ();
 
   initial begin
     clk = 0;

@@ -1,13 +1,13 @@
 `timescale 1ns/1ps
 
-module round_robin_arbiter_tb;
+module tb;
 
   parameter NUM_CORES = 1; // Test with 4 core
 
   reg clk;
   reg rst;
 
-  round_robin_arbiter #(NUM_CORES) uut ();
+  barrier_sync #(NUM_CORES) uut ();
 
   initial begin
     clk = 0;

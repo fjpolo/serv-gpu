@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module instruction_memory_tb;
+module tb;
 
   parameter NUM_CORES = 1; // Test with 4 core
 
